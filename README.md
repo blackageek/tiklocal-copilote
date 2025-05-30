@@ -61,20 +61,6 @@ ollama pull starcoder
 
 ---
 
-## **Configuration** ⚙️  
-
-### **Changer de modèle IA**  
-1. Ouvrez le chat (`Ctrl+Alt+C`)  
-2. Cliquez sur **"Modèle: [nom-du-modèle]"** en haut à droite  
-3. Sélectionnez un modèle installé (ex: `starcoder`, `phi3`)  
-
-### **Paramètres recommandés** (dans `settings.json`)  
-```json
-{
-  "localCopilot.defaultModel": "starcoder",
-  "localCopilot.temperature": 0.3  // Contrôle la créativité (0=précis, 1=créatif)
-}
-```
 
 ---
 
