@@ -1,0 +1,55 @@
+{
+    "name": "tiklocal-copilot",
+  "displayName": "tiklocal-copilot",
+  "description": "Extension VSCode pour générer et modifier du code avec des modèles IA locaux via Ollama. Offre un chat interactif, l'application directe des suggestions et la prise en charge multi-langage.",
+    "version": "1.0.0",
+    "publisher": "lafiaTIK",
+    "engines": {
+        "vscode": "^1.100.0"
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "categories": [
+        "Programming Languages",
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:local-copilot.generate",
+        "onCommand:local-copilot.modify"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "local-copilot.generate",
+                "title": "Local Copilot: Générer du code"
+            },
+            {
+                "command": "local-copilot.modify",
+                "title": "Local Copilot: Modifier la sélection"
+            },
+            {
+                "command": "local-copilot.chat",
+                "title": "Local Copilot: Ouvrir le chat"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "local-copilot.chat",
+                "key": "ctrl+alt+c",
+                "mac": "cmd+alt+c"
+            }
+        ]
+    },
+    "dependencies": {
+        "axios": "^1.6.2"
+    },
+    "devDependencies": {
+        "@types/node": "^22.15.24",
+        "@types/vscode": "^1.100.0",
+        "typescript": "^5.8.3"
+    }
+}
